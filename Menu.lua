@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Dark Menu V1", IntroText = "Dark Menu V1 Loading...", HidePremium = false, SaveConfig = false})
+local Window = OrionLib:MakeWindow({Name = "Dark Menu V 1", IntroText = "Dark Menu V 1 Loading...", HidePremium = false, SaveConfig = false})
 
 -- Universal Scripts
 local Universal = Window:MakeTab({
@@ -77,5 +77,23 @@ if game.placeId == 16389395869 then
 	})
 
 end
+
+-- mic up
+
+if game.placeId == 6884319169 then
+
+	local mic = Window:MakeTab({
+		Name = "Menu"
+	})
+
+	mic:AddButton({
+		Name = "menu",
+		Callback = function()
+			loadstring(game:HttpGet('https://whimper.xyz/kitty'))()
+		end
+	})
+
+end
+
 
 OrionLib:Init()
