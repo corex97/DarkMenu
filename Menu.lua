@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Dark Menu v1.1", IntroText = "Dark Menu Loading...", HidePremium = false, SaveConfig=true, ConfigFolder="Darkmenu"})
+local Window = OrionLib:MakeWindow({Name = "Dark Menu v1.2", IntroText = "Dark Menu Loading...", HidePremium = false, SaveConfig=true, ConfigFolder="Darkmenu"})
 
 OrionLib:MakeNotification({
 	Name = "Dark Menu",
