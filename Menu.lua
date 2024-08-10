@@ -96,6 +96,17 @@ Hubs:AddButton({
         loadstring(game:HttpGet(("https://raw.githubusercontent.com/drakker33/rblx-decaying-winter/main/DecayingWinter.lua"), true))()
         OrionLib:MakeNotification({Name="Dark Menu",Content="Domain X Started!",Time=10});end})
 
+local Section = Hubs:AddSection({
+Name = ""
+})
+
+Hubs:AddButton({
+	Name = "Kitty Hub (Supports over 160+ Games)",
+	Callback = function()
+		loadstring(game:HttpGet('https://whimper.xyz/kitty'))()
+		OrionLib:MakeNotification({Name="Dark Menu",Content="Started Kitty!",Time=10})
+		end })
+
 -- A Dusty Trip Scripts
 if game.placeId == 16389395869 then
 
@@ -111,30 +122,36 @@ if game.placeId == 16389395869 then
 	})
 end
 
--- mic up
+-- info
 
-if game.placeId == 6884319169 then
+local infos = Window:MakeTab({
+	Name = "Info "
+})
 
-	local mic = Window:MakeTab({
-		Name = "Mic Up"
-	})
+local Section = infos:AddSection({
+	Name = "infos"
+})
 
-    local SettingsSection = mic:AddSection({
-        Name = "Mic Up Scripts"
-    })
+infos:AddButton({
+	Name = "What Kitty Supports",
+	Callback = function()
+		setclipboard("https://whimper.xyz/kittysupports")
+		OrionLib:MakeNotification({Name="Dark Menu",Content="Link is in your clipboard! crtl + v / strg + v To put it in your address bar in your browser",Time=15})
+	end })
 
-	mic:AddButton({
-		Name = "Kitty",
-		Callback = function()
-			loadstring(game:HttpGet('https://whimper.xyz/kitty'))()
-    end })
 
-end
+local Section = infos:AddSection({
+	Name = "Credits"
+})
+
+infos:AddLabel("Please note: I did not make any of these scripts")
+infos:AddLabel("shoutout the creators for their hard work.")
+infos:AddLabel("Made By corex97 (GitHub)")
 
 -- settings
 
 local SettingsTab = Window:MakeTab({
-	Name = "Settings / Credits"
+	Name = "Settings "
 })
 
 local SettingsSection = SettingsTab:AddSection({
@@ -144,8 +161,7 @@ local SettingsSection = SettingsTab:AddSection({
 SettingsSection:AddButton({
 	Name = "Rejoin Server",
 	Callback = function()
-			
-        OrionLib:MakeNotification({Name="Dark Menu",Content="Some Servers dont Let you rejoin!",Time=4})
+        OrionLib:MakeNotification({Name="Dark Menu",Content="Some Servers dont Let you rejoin! wait 4s",Time=4})
      wait(4)
     
         local ts = game:GetService("TeleportService")
@@ -163,12 +179,5 @@ SettingsSection:AddButton({
   	end    
 })
 
-local SettingsSection = SettingsTab:AddSection({
-	Name = "Credits"
-})
-
-SettingsSection:AddLabel("Please note: I did not make any of these scripts")
-SettingsSection:AddLabel("shoutout the creators for their hard work.")
-SettingsSection:AddLabel("Made By corex97 (GitHub)")
 
 OrionLib:Init()
