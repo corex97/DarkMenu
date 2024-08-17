@@ -1,1 +1,1 @@
-player.UserId == 7132399852
+if player.UserId == 7132399852 
